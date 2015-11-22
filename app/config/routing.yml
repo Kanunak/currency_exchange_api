@@ -1,3 +1,14 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+bundle_web:
+    resource: "@BundleWebBundle/Resources/config/routing.xml"
+    prefix:   /
+
+bundle_api:
+    resource: "@BundleApiBundle/Resources/config/routing.xml"
+    prefix: /api
+    defaults: {_format: json}
+    type: rest
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc
+
