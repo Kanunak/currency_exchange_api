@@ -1,0 +1,5 @@
+pre-commit:
+    enabled: true
+    execute: { composer: true, jsonlint: true, phplint: true, phpmd: true, phpcs: { enabled: true, standard: PSR2 }, php-cs-fixer: { enabled: true, levels: { psr0: true, psr1: true, psr2: true, symfony: true } }, phpunit: { enabled: true, random-mode: true } }
+commit-msg:
+    enabled: false
