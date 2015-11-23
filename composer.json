@@ -8,15 +8,13 @@
             "SymfonyStandard": "app/"
         },
         "psr-4": {
-            "Atrapalo\\ProductBag\\": "src-productbag/",
-            "Atrapalo\\": "src/"
+            "Kanunak\\": "src/"
 
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Atrapalo\\ProductBag\\Test\\": "test-productbag/",
-            "Atrapalo\\Test\\": "test/"
+            "Kanunak\\Test\\": "test/"
         }
     },
     "require": {

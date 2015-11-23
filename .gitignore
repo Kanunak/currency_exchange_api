@@ -10,4 +10,5 @@
 /vendor/
 /web/bundles/
 .idea
+/coverage
 

@@ -4,13 +4,33 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--
     <services>
-        <service id="bundle_api.example" class="Bundle\ApiBundle\Example">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
+        <!-- Interactor -->
+        <service
+            id="kanunak.exchange.interactor.get_currency_pair_ratio.get_currency_pair_ratio_use_case"
+            class="Kanunak\Exchange\Interactor\GetCurrencyPairRatio\GetCurrencyPairRatioUseCase">
+            <argument type="service" id="kanunak.exchange.application.service.get_currency_pair_ratio_service" />
         </service>
+
+        <!-- Service -->
+        <service
+            id="kanunak.exchange.application.service.get_currency_pair_ratio_service"
+            class="Kanunak\Exchange\Application\Service\GetCurrencyPairRatioService" >
+            <argument type="service" id="kanunak.exchange.infrastructure.integration.open_exchange_rate.open_exchange_rate_repository" />
+        </service>
+
+        <!-- Presenter -->
+        <service
+            id="kanunak.exchange.infrastructure.ui.presenter.get_currency_pair_ratio.api.currency_pair_presenter"
+            class="Kanunak\Exchange\Infrastructure\UI\Presenter\GetCurrencyPairRatio\Api\CurrencyPairPresenter">
+         </service>
+
+        <!-- Integration -->
+        <service
+            id="kanunak.exchange.infrastructure.integration.open_exchange_rate.open_exchange_rate_repository"
+            class="Kanunak\Exchange\Infrastructure\Integration\OpenExchangeRate\OpenExchangeRateRepository">
+        </service>
+
+
     </services>
-    -->
 </container>

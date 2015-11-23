@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phpunit colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         syntaxCheck="true"
+         stopOnError="false"
+         stopOnFailure="false"
+         showOnlySummary="true"
+         verbose="false">
+
+    <php>
+        <ini name="intl.default_locale" value="en"/>
+        <ini name="intl.error_level" value="0"/>
+        <ini name="memory_limit" value="-1"/>
+        <ini name="max_execution_time" value="-1"/>
+        <ini name="date.timezone" value="Europe/Madrid"/>
+        <ini name="error_reporting" value="E_ALL"/>
+    </php>
+
+    <testsuites>
+        <testsuite name="Kanunak Unit Tests">
+            <directory>./test</directory>
+        </testsuite>
+    </testsuites>
+
+    <listeners>
+        <listener class="\Mockery\Adapter\Phpunit\TestListener"/>
+    </listeners>
+
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory>src</directory>
+            <exclude>
+                <directory>src/Bundle</directory>
+                <directory>src/*/Infrastructure</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

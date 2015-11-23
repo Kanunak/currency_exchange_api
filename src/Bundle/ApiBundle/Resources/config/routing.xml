@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<routes xmlns="http://symfony.com/schema/routing"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+<routes xmlns="http://friendsofsymfony.github.com/schema/rest"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://friendsofsymfony.github.com/schema/rest https://raw.github.com/FriendsOfSymfony/FOSRestBundle/master/Resources/config/schema/routing/rest_routing-1.0.xsd">
 
-    <route id="bundle_api_homepage" path="/hello/{name}">
-        <default key="_controller">BundleApiBundle:Default:index</default>
-    </route>
+    <import id="exchange" resource="Kanunak\Bundle\ApiBundle\Controller\Exchange\ExchangeController" type="rest" />
 </routes>

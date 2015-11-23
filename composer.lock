@@ -1340,16 +1340,16 @@
         },
         {
             "name": "kanunak/money",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Kanunak/money.git",
-                "reference": "68f9342839841b844355d2a606b039858b7daf9e"
+                "reference": "97d9b37cb969db2601cac13b0e8cc74ae849b183"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Kanunak/money/zipball/68f9342839841b844355d2a606b039858b7daf9e",
-                "reference": "68f9342839841b844355d2a606b039858b7daf9e",
+                "url": "https://api.github.com/repos/Kanunak/money/zipball/97d9b37cb969db2601cac13b0e8cc74ae849b183",
+                "reference": "97d9b37cb969db2601cac13b0e8cc74ae849b183",
                 "shasum": ""
             },
             "require": {
@@ -1379,7 +1379,7 @@
                 }
             ],
             "description": "Money library",
-            "time": "2015-11-21 16:57:31"
+            "time": "2015-11-22 11:31:55"
         },
         {
             "name": "kriswallsmith/assetic",
